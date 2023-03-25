@@ -1,6 +1,6 @@
--- converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci) in your MySQL server.
--- need to convert Database hbtn_0c_0, Table first_table, Field name in first_table to UTF8
+-- lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0 in your MySQL server
+-- Results should display both the score and the name (in this order)
+-- Records should be ordered by score (top first)
+-- The database name will be passed as an argument of the mysql command
 
-ALTER DATABASE hbtn_0c_0 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE hbtn_0c_0;
-ALTER TABLE first_table CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+SELECT score, name FROM second_table WHERE score >= 10 ORDER BY score DESC;
